@@ -91,6 +91,9 @@
         <section class="slide" id="slide-4">
             <div class="slide-content">
                 <h2 class="slide-header">Live Demo: Building with Claude</h2>
+                <button class="tips-btn" onclick="showPromptTips()">
+                    <span class="tips-icon">💡</span> Prompting Tips
+                </button>
                 <h3 class="demo-subtitle">Interactive Website Creation</h3>
                 <p class="demo-description">During this session, we'll take suggestions from the audience and build a website using Claude AI. One possible demonstration project will be creating a website for the LSEG St. Louis Unconference.</p>
 
@@ -273,6 +276,52 @@
         </section>
     </main>
 
+    <!-- Prompting Tips Modal -->
+    <div id="promptTipsModal" class="modal" onclick="closePromptTips()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2>Tips for Building Websites with AI Prompts</h2>
+                <button class="modal-close" onclick="closePromptTips()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="tips-section">
+                    <h3>💬 Clear, Direct Commands</h3>
+                    <p>Be specific and direct about what you want. AI responds well to clear instructions.</p>
+                    <div class="tips-examples">
+                        <h4>Examples from this presentation:</h4>
+                        <div class="example-prompt">"Update the last slide with the information in the attached email."</div>
+                        <div class="example-prompt">"Add links to the Technology Stack list to websites for the listed tools."</div>
+                        <div class="example-prompt">"Change the last 2 slides to not use bullet points. Try another way to present this information."</div>
+                        <div class="example-prompt">"Add a copy to clipboard button on 'Your Turn: Try This Prompt' to make it easy to get the contents of the page out."</div>
+                    </div>
+                </div>
+
+                <div class="tips-section">
+                    <h3>💾 Commit Changes You Like</h3>
+                    <p>Use version control (like Git) to save your progress. Sometimes you need to revert to an older version if a new prompt removes features you like or breaks something that was working.</p>
+                    <div class="tips-highlight">
+                        <strong>Pro Tip:</strong> After each successful change you're happy with, commit it. This gives you safe restore points.
+                    </div>
+                </div>
+
+                <div class="tips-section">
+                    <h3>🎯 Feel Free to Make Big and Small Prompts</h3>
+                    <p>Don't be afraid to request both radical changes and tiny tweaks. AI can handle:</p>
+                    <div class="tips-list">
+                        <div class="tip-item"><strong>Big changes:</strong> "Redesign the entire layout" or "Add a new slide with..."</div>
+                        <div class="tip-item"><strong>Small changes:</strong> "Fix the spacing on that button" or "Change the color to blue"</div>
+                        <div class="tip-item"><strong>Recovery:</strong> If something goes wrong, you can always back it out with version control or ask the AI to revert the change</div>
+                    </div>
+                </div>
+
+                <div class="tips-section">
+                    <h3>🔄 Iterative Refinement</h3>
+                    <p>Building with AI is an iterative process. Start with a basic request, see the result, then refine. Each prompt builds on the previous work.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Original Prompt Modal -->
     <div id="originalPromptModal" class="modal" onclick="closeOriginalPrompt()">
         <div class="modal-content" onclick="event.stopPropagation()">
@@ -350,6 +399,15 @@
                 changeSlide(-1);
             }
         });
+
+        // Prompting tips modal functions
+        function showPromptTips() {
+            document.getElementById('promptTipsModal').style.display = 'flex';
+        }
+
+        function closePromptTips() {
+            document.getElementById('promptTipsModal').style.display = 'none';
+        }
 
         // Original prompt modal functions
         function showOriginalPrompt() {
