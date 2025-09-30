@@ -115,6 +115,9 @@
         <section class="slide" id="slide-5">
             <div class="slide-content">
                 <h2 class="slide-header">Your Turn: Try This Prompt</h2>
+                <button id="copyPromptBtn" class="copy-prompt-btn" onclick="copyPromptToClipboard()">
+                    <span class="copy-icon">📋</span> Copy Prompt to Clipboard
+                </button>
                 <div class="prompt-box">
                     <h3>Create a Website for LSEG St. Louis Unconference 2025</h3>
                     <div class="prompt-sections">
@@ -209,6 +212,9 @@
         <section class="slide" id="slide-6">
             <div class="slide-content">
                 <h2 class="slide-header">This Presentation: GitHub Pages</h2>
+                <button class="view-original-prompt-btn" onclick="showOriginalPrompt()">
+                    <span class="prompt-icon">🎯</span> View Original Prompt
+                </button>
                 <div class="github-pages-layout">
                     <div class="github-links">
                         <div class="link-card">
@@ -267,6 +273,48 @@
         </section>
     </main>
 
+    <!-- Original Prompt Modal -->
+    <div id="originalPromptModal" class="modal" onclick="closeOriginalPrompt()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2>Original Prompt Used to Create This Website</h2>
+                <button class="modal-close" onclick="closeOriginalPrompt()">×</button>
+            </div>
+            <div class="modal-body">
+                <button class="copy-modal-btn" onclick="copyOriginalPrompt()">
+                    <span class="copy-icon">📋</span> Copy to Clipboard
+                </button>
+                <pre id="originalPromptText">Create a website that serves as a presentation for a conference. On October 3rd, 2025 I am presenting a 30 minute session at the St. Louis LSEG (London Stock Exchange Group) office Unconference tilted "The AI Web Stack: From Zero to Hosted" with the description, "AI tools are changing how we develop and are enabling technical people to branch out into new domains. This session will cover how to use AI to create and host a website from scratch with limited front end stack knowledge." I am Matthew Schrenk. I want to briefly cover the website I made for my hobby farm, "Glory Creek Ranch" using Google AI Studio and then Gemini CLI. That website code is in my Github account at https://github.com/RedactedMan/glory-creek-ranch I have it hosted on a Raspberry Pi in my house. The website is available at http://glorycreekranchstc.ddns.net/ I created that website using just text prompts, uploading my own pictures, talking with Gemini CLI to setup the Raspberry PI running nginx, deploy it to the Raspberry PI running on local machine gcr that I made a public web host through my router firewall. After presenting that project I want to take suggestions from the audience and build a website using Claude. My first idea for that website is a website for the LSEG St. Louis Unconference that has the schedule and presentation details. Here are those details, "Sessions
+* Compiler Sanitizers
+   * Michael Morey
+* Ethical Considerations of GenAI
+   * Richard McWhirter
+   * Could cancel at last minute if wife delivers twins.
+* Vibe Coding
+   * Lucas Hinkebein
+   * "Getting the most out of coding with AI."
+* Privatizing Your Life
+   * Travis Menghini
+   * Setting up a personal media server at home so that all your photos, etc. are stored safely and securely. (Not in the cloud!)
+* Evolution of an App
+   * Tathagata Dasgupta
+   * Change is one of the core values of LSEG. As developers, we live it everyday - between the git commits, continuous integration and continuous delivery - a lot of our craft is about harnessing change and promising stability to our clients. What we have learned is that small doses over a cadence, is more effective over a big bang. Make it work, make it right, make it better - this talk will try to distill the lessons learned while migrating an app from a single node deployment to a distributed solution, and how we took the opportunity to evolve it using strategic LSEG tools.
+* Developer Success
+   * Alex Temple
+* Photo Editing Using Lightroom and Photoshop
+   * James Chaney
+* The AI Web Stack: From Zero to Hosted
+   * Matthew Schrenk
+* Secure Coding Standards for C++
+   * Guanyu Tian
+   * Buffer overflow and its mitigation strategy, string vulnerabilities and mitigation method, integer conversion, overflow issues, etc.
+* AI's Core Sources and Credibility
+   * Bekzod Khaitov
+   * How to double check sources and make sure you're using the right ones."</pre>
+            </div>
+        </div>
+    </div>
+
     <script>
         let currentSlide = 1;
         const totalSlides = 6;
@@ -302,6 +350,104 @@
                 changeSlide(-1);
             }
         });
+
+        // Original prompt modal functions
+        function showOriginalPrompt() {
+            document.getElementById('originalPromptModal').style.display = 'flex';
+        }
+
+        function closeOriginalPrompt() {
+            document.getElementById('originalPromptModal').style.display = 'none';
+        }
+
+        function copyOriginalPrompt() {
+            const promptText = document.getElementById('originalPromptText').textContent;
+            navigator.clipboard.writeText(promptText).then(function() {
+                const btn = event.target.closest('.copy-modal-btn');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<span class="copy-icon">✅</span> Copied!';
+                btn.style.background = 'rgba(74, 222, 128, 0.8)';
+
+                setTimeout(function() {
+                    btn.innerHTML = originalText;
+                    btn.style.background = '';
+                }, 2000);
+            }).catch(function(err) {
+                console.error('Failed to copy text: ', err);
+                alert('Failed to copy to clipboard. Please try again.');
+            });
+        }
+
+        // Copy prompt to clipboard function
+        function copyPromptToClipboard() {
+            const promptText = `Create a Website for LSEG St. Louis Unconference 2025
+
+Context:
+The LSEG St. Louis Technology Unconference takes place Friday, October 3rd, 2025. The event features 10 technical sessions across three rooms (Training Room, Board Room, and Cozy Corner).
+
+Schedule:
+- 7:30 AM - 9:30 AM: Coffee Truck
+- 8:00 AM - 9:00 AM: Breakfast
+- 9:00 AM - 9:15 AM: Intro in Training Room (Stephen Carson)
+- 9:15 AM - 10:00 AM: Ice Breaker
+- 10:30 AM - 11:00 AM: Session Block 1 (3 concurrent sessions)
+- 11:30 AM - 12:00 PM: Session Block 2 (3 concurrent sessions)
+- 12:30 PM - 1:30 PM: Lunch
+- 1:30 PM - 2:00 PM: Session Block 3 (3 concurrent sessions)
+- 2:30 PM - 3:00 PM: Plenary Session
+- 3:00 PM - 3:30 PM: Voting
+- 3:30 PM - 4:00 PM: Wrap-up, Award Presenter Prizes in Training Room
+
+Sessions to Include:
+
+1. Code Sanitizers by Michael Morey
+   Compiler-enabled tools to detect undefined or suspicious program behavior in memory-unsafe languages at runtime.
+
+2. Ethical Considerations of GenAI by Richard McWhirter
+   Critical thinking about technology eroding critical thinking.
+
+3. Vibe Coding by Lucas Hinkebein
+   Getting the most out of coding with AI.
+
+4. Privatizing Your Life by Travis Menghini
+   Setting up a personal media server at home for safe and secure storage.
+
+5. Evolution of an App by Tathagata Dasgupta
+   Migrating from single node to distributed solution using strategic LSEG tools.
+
+6. Developer Success by Alex Temple
+   Supporting developers in their journey at LSEG with enhanced technical support.
+
+7. Photo Editing Using Lightroom and Photoshop by James Chaney
+   Latest AI photo editing capabilities for wildlife, landscape and portrait photography.
+
+8. The AI Web Stack: From Zero to Hosted by Matthew Schrenk
+   Using AI to create and host websites from scratch.
+
+9. Secure Coding Standards for C++ by Guanyu Tian
+   Buffer overflow, string vulnerabilities, integer conversion issues and mitigation strategies.
+
+10. Agentic AI: An Architectural Framework by Mark Sandford
+    Hourglass Model and Model Context Protocol (MCP) for AI agents and tools.
+
+Design Requirements:
+Create a modern, professional website with a clean layout, responsive design, full day schedule table, session descriptions, speaker bios, and easy navigation.`;
+
+            navigator.clipboard.writeText(promptText).then(function() {
+                const btn = document.getElementById('copyPromptBtn');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<span class="copy-icon">✅</span> Copied!';
+                btn.style.background = 'rgba(74, 222, 128, 0.3)';
+
+                setTimeout(function() {
+                    btn.innerHTML = originalText;
+                    btn.style.background = '';
+                }, 2000);
+            }).catch(function(err) {
+                console.error('Failed to copy text: ', err);
+                alert('Failed to copy to clipboard. Please try again.');
+            });
+        }
 
         // Initialize
         showSlide(currentSlide);
