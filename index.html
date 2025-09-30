@@ -7,33 +7,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>The AI Web Stack: From Zero to Hosted</h1>
-            <p class="subtitle">LSEG St. Louis Unconference 2025</p>
-            <p class="presenter">Presented by Matthew Schrenk</p>
-            <p class="date">October 3rd, 2025 • 30 minutes</p>
-        </div>
-    </header>
+    <!-- Slide Navigation -->
+    <div class="slide-nav">
+        <button id="prevBtn" class="nav-btn" onclick="changeSlide(-1)">‹</button>
+        <span id="slideCounter" class="slide-counter">1 / 5</span>
+        <button id="nextBtn" class="nav-btn" onclick="changeSlide(1)">›</button>
+    </div>
 
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#glory-creek">Glory Creek Ranch</a></li>
-                <li><a href="#demo">Live Demo</a></li>
-                <li><a href="#schedule">Full Schedule</a></li>
-            </ul>
-        </div>
-    </nav>
+    <!-- Slide Progress Bar -->
+    <div class="progress-bar">
+        <div id="progress" class="progress"></div>
+    </div>
 
-    <main>
-        <section id="overview" class="section">
-            <div class="container">
-                <h2>Session Overview</h2>
-                <p class="lead">AI tools are changing how we develop and are enabling technical people to branch out into new domains. This session will cover how to use AI to create and host a website from scratch with limited front end stack knowledge.</p>
+    <main class="presentation">
+        <!-- Slide 1: Title -->
+        <section class="slide active" id="slide-1">
+            <div class="slide-content">
+                <h1 class="slide-title">The AI Web Stack: From Zero to Hosted</h1>
+                <p class="slide-subtitle">LSEG St. Louis Unconference 2025</p>
+                <p class="slide-presenter">Presented by Matthew Schrenk</p>
+                <p class="slide-date">October 3rd, 2025 • 30 minutes</p>
+            </div>
+        </section>
 
-                <div class="highlights">
+        <!-- Slide 2: Overview -->
+        <section class="slide" id="slide-2">
+            <div class="slide-content">
+                <h2 class="slide-header">Session Overview</h2>
+                <p class="slide-lead">AI tools are changing how we develop and are enabling technical people to branch out into new domains.</p>
+
+                <div class="slide-highlights">
                     <div class="highlight-item">
                         <h3>🤖 AI-Powered Development</h3>
                         <p>Using Google AI Studio and Gemini CLI to build complete websites</p>
@@ -50,28 +53,28 @@
             </div>
         </section>
 
-        <section id="glory-creek" class="section">
-            <div class="container">
-                <h2>Case Study: Glory Creek Ranch</h2>
-                <div class="project-showcase">
-                    <div class="project-info">
+        <!-- Slide 3: Glory Creek Ranch Case Study -->
+        <section class="slide" id="slide-3">
+            <div class="slide-content">
+                <h2 class="slide-header">Case Study: Glory Creek Ranch</h2>
+                <div class="slide-showcase">
+                    <div class="showcase-left">
                         <h3>Built with AI from Scratch</h3>
-                        <ul>
+                        <ul class="showcase-list">
                             <li>Created using only text prompts</li>
                             <li>Personal photos uploaded to AI</li>
                             <li>Gemini CLI for Raspberry Pi setup</li>
                             <li>nginx configuration and deployment</li>
                             <li>Home network with public access via router firewall</li>
                         </ul>
-
-                        <div class="links">
+                        <div class="showcase-links">
                             <a href="http://glorycreekranchstc.ddns.net/" target="_blank" class="btn btn-primary">Visit Live Site</a>
                             <a href="https://github.com/RedactedMan/glory-creek-ranch" target="_blank" class="btn btn-secondary">View Source Code</a>
                         </div>
                     </div>
-                    <div class="tech-stack">
+                    <div class="showcase-right">
                         <h3>Technology Stack</h3>
-                        <div class="tech-items">
+                        <div class="tech-grid">
                             <span class="tech-item">Google AI Studio</span>
                             <span class="tech-item">Gemini CLI</span>
                             <span class="tech-item">Raspberry Pi</span>
@@ -84,101 +87,118 @@
             </div>
         </section>
 
-        <section id="demo" class="section">
-            <div class="container">
-                <h2>Live Demo: Building with Claude</h2>
-                <div class="demo-section">
-                    <h3>Interactive Website Creation</h3>
-                    <p>During this session, we'll take suggestions from the audience and build a website using Claude AI. Our demonstration project will be creating a comprehensive website for the LSEG St. Louis Unconference.</p>
+        <!-- Slide 4: Live Demo -->
+        <section class="slide" id="slide-4">
+            <div class="slide-content">
+                <h2 class="slide-header">Live Demo: Building with Claude</h2>
+                <h3 class="demo-subtitle">Interactive Website Creation</h3>
+                <p class="demo-description">During this session, we'll take suggestions from the audience and build a website using Claude AI. Our demonstration project will be creating a comprehensive website for the LSEG St. Louis Unconference.</p>
 
-                    <div class="demo-features">
-                        <div class="feature">
-                            <h4>Real-time Development</h4>
-                            <p>Watch as we create HTML, CSS, and interactive features using AI assistance</p>
-                        </div>
-                        <div class="feature">
-                            <h4>Audience Participation</h4>
-                            <p>Your suggestions will shape the website we build together</p>
-                        </div>
-                        <div class="feature">
-                            <h4>GitHub Pages Deployment</h4>
-                            <p>See the complete process from code to live website</p>
-                        </div>
+                <div class="demo-grid">
+                    <div class="demo-feature">
+                        <h4>Real-time Development</h4>
+                        <p>Watch as we create HTML, CSS, and interactive features using AI assistance</p>
+                    </div>
+                    <div class="demo-feature">
+                        <h4>Audience Participation</h4>
+                        <p>Your suggestions will shape the website we build together</p>
+                    </div>
+                    <div class="demo-feature">
+                        <h4>GitHub Pages Deployment</h4>
+                        <p>See the complete process from code to live website</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="schedule" class="section">
-            <div class="container">
-                <h2>LSEG St. Louis Unconference 2025 - Full Schedule</h2>
-                <div class="sessions-grid">
-                    <div class="session-card">
-                        <h3>Compiler Sanitizers</h3>
-                        <p class="presenter">Michael Morey</p>
+        <!-- Slide 5: Conference Schedule -->
+        <section class="slide" id="slide-5">
+            <div class="slide-content">
+                <h2 class="slide-header">LSEG St. Louis Unconference 2025</h2>
+                <div class="schedule-grid">
+                    <div class="session-mini">
+                        <h4>Compiler Sanitizers</h4>
+                        <p>Michael Morey</p>
                     </div>
-
-                    <div class="session-card">
-                        <h3>Ethical Considerations of GenAI</h3>
-                        <p class="presenter">Richard McWhirter</p>
-                        <p class="note">Could cancel at last minute if wife delivers twins.</p>
+                    <div class="session-mini">
+                        <h4>Ethical Considerations of GenAI</h4>
+                        <p>Richard McWhirter</p>
                     </div>
-
-                    <div class="session-card">
-                        <h3>Vibe Coding</h3>
-                        <p class="presenter">Lucas Hinkebein</p>
-                        <p class="description">"Getting the most out of coding with AI."</p>
+                    <div class="session-mini">
+                        <h4>Vibe Coding</h4>
+                        <p>Lucas Hinkebein</p>
                     </div>
-
-                    <div class="session-card">
-                        <h3>Privatizing Your Life</h3>
-                        <p class="presenter">Travis Menghini</p>
-                        <p class="description">Setting up a personal media server at home so that all your photos, etc. are stored safely and securely. (Not in the cloud!)</p>
+                    <div class="session-mini">
+                        <h4>Privatizing Your Life</h4>
+                        <p>Travis Menghini</p>
                     </div>
-
-                    <div class="session-card">
-                        <h3>Evolution of an App</h3>
-                        <p class="presenter">Tathagata Dasgupta</p>
-                        <p class="description">Change is one of the core values of LSEG. As developers, we live it everyday - between the git commits, continuous integration and continuous delivery - a lot of our craft is about harnessing change and promising stability to our clients. What we have learned is that small doses over a cadence, is more effective over a big bang. Make it work, make it right, make it better - this talk will try to distill the lessons learned while migrating an app from a single node deployment to a distributed solution, and how we took the opportunity to evolve it using strategic LSEG tools.</p>
+                    <div class="session-mini">
+                        <h4>Evolution of an App</h4>
+                        <p>Tathagata Dasgupta</p>
                     </div>
-
-                    <div class="session-card">
-                        <h3>Developer Success</h3>
-                        <p class="presenter">Alex Temple</p>
+                    <div class="session-mini">
+                        <h4>Developer Success</h4>
+                        <p>Alex Temple</p>
                     </div>
-
-                    <div class="session-card">
-                        <h3>Photo Editing Using Lightroom and Photoshop</h3>
-                        <p class="presenter">James Chaney</p>
+                    <div class="session-mini">
+                        <h4>Photo Editing</h4>
+                        <p>James Chaney</p>
                     </div>
-
-                    <div class="session-card current-session">
-                        <h3>The AI Web Stack: From Zero to Hosted</h3>
-                        <p class="presenter">Matthew Schrenk</p>
-                        <p class="description">AI tools are changing how we develop and are enabling technical people to branch out into new domains. This session will cover how to use AI to create and host a website from scratch with limited front end stack knowledge.</p>
+                    <div class="session-mini current">
+                        <h4>The AI Web Stack</h4>
+                        <p>Matthew Schrenk</p>
                     </div>
-
-                    <div class="session-card">
-                        <h3>Secure Coding Standards for C++</h3>
-                        <p class="presenter">Guanyu Tian</p>
-                        <p class="description">Buffer overflow and its mitigation strategy, string vulnerabilities and mitigation method, integer conversion, overflow issues, etc.</p>
+                    <div class="session-mini">
+                        <h4>Secure Coding Standards</h4>
+                        <p>Guanyu Tian</p>
                     </div>
-
-                    <div class="session-card">
-                        <h3>AI's Core Sources and Credibility</h3>
-                        <p class="presenter">Bekzod Khaitov</p>
-                        <p class="description">How to double check sources and make sure you're using the right ones.</p>
+                    <div class="session-mini">
+                        <h4>AI's Core Sources</h4>
+                        <p>Bekzod Khaitov</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Matthew Schrenk - LSEG St. Louis Unconference</p>
-            <p>Built with AI assistance using Claude</p>
-        </div>
-    </footer>
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 5;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+
+            if (n > totalSlides) currentSlide = 1;
+            if (n < 1) currentSlide = totalSlides;
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[currentSlide - 1].classList.add('active');
+
+            document.getElementById('slideCounter').textContent = `${currentSlide} / ${totalSlides}`;
+
+            // Update progress bar
+            const progress = (currentSlide / totalSlides) * 100;
+            document.getElementById('progress').style.width = progress + '%';
+        }
+
+        function changeSlide(n) {
+            currentSlide += n;
+            showSlide(currentSlide);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                changeSlide(1);
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                changeSlide(-1);
+            }
+        });
+
+        // Initialize
+        showSlide(currentSlide);
+    </script>
 </body>
 </html>

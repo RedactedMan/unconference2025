@@ -10,7 +10,7 @@ A 30-minute presentation demonstrating how AI tools are enabling technical peopl
 
 ## 🌐 Live Website
 
-**GitHub Pages:** https://redactedman.github.io/unconference2025.github.io/
+**GitHub Pages:** https://redactedman.github.io/unconference2025/
 
 ## 📋 What's Covered
 
@@ -48,7 +48,7 @@ Interactive demonstration building a website using Claude AI based on audience s
 ## 📂 Project Structure
 
 ```
-unconference2025.github.io/
+unconference2025/
 ├── index.html          # Main presentation website
 ├── styles.css          # Styling and responsive design
 ├── README.md           # This file
@@ -68,8 +68,8 @@ unconference2025.github.io/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/RedactedMan/unconference2025.github.io.git
-   cd unconference2025.github.io
+   git clone https://github.com/RedactedMan/unconference2025.git
+   cd unconference2025
    ```
 
 2. Start a local web server:
