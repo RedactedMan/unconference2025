@@ -7,6 +7,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-attachment: fixed;
     color: #333;
     overflow: hidden;
     height: 100vh;
@@ -667,8 +668,28 @@ body {
 }
 
 @media (max-width: 768px) {
+    body {
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: auto;
+        min-height: 100vh;
+    }
+
     .slide {
-        padding: 80px 20px 20px 20px;
+        padding: 100px 20px 40px 20px;
+        position: relative;
+        height: auto;
+        min-height: 100vh;
+        transform: none;
+    }
+
+    .slide.active {
+        transform: none;
+    }
+
+    .slide-content {
+        overflow-y: visible;
+        max-height: none;
     }
 
     .slide-title {
@@ -688,15 +709,24 @@ body {
     }
 
     .slide-nav {
+        position: fixed;
         top: 10px;
-        right: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
         padding: 8px 15px;
+        z-index: 1000;
     }
 
     .nav-btn {
         width: 35px;
         height: 35px;
         font-size: 16px;
+    }
+
+    .time-block-inline {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
     }
 
     /* Sessions grid to single column */
