@@ -10,7 +10,7 @@
     <!-- Slide Navigation -->
     <div class="slide-nav">
         <button id="prevBtn" class="nav-btn" onclick="changeSlide(-1)">‹</button>
-        <span id="slideCounter" class="slide-counter">1 / 5</span>
+        <span id="slideCounter" class="slide-counter">1 / 6</span>
         <button id="nextBtn" class="nav-btn" onclick="changeSlide(1)">›</button>
     </div>
 
@@ -75,11 +75,11 @@
                     <div class="showcase-right">
                         <h3>Technology Stack</h3>
                         <div class="tech-grid">
-                            <span class="tech-item">Google AI Studio</span>
-                            <span class="tech-item">Gemini CLI</span>
-                            <span class="tech-item">Raspberry Pi</span>
-                            <span class="tech-item">nginx</span>
-                            <span class="tech-item">DDNS</span>
+                            <a href="https://aistudio.google.com/" target="_blank" class="tech-item">Google AI Studio</a>
+                            <a href="https://github.com/google-gemini/gemini-cli" target="_blank" class="tech-item">Gemini CLI</a>
+                            <a href="https://www.raspberrypi.com/" target="_blank" class="tech-item">Raspberry Pi</a>
+                            <a href="https://nginx.org/" target="_blank" class="tech-item">nginx</a>
+                            <a href="https://www.noip.com/remote-access" target="_blank" class="tech-item">DDNS</a>
                             <span class="tech-item">Home Hosting</span>
                         </div>
                     </div>
@@ -92,7 +92,7 @@
             <div class="slide-content">
                 <h2 class="slide-header">Live Demo: Building with Claude</h2>
                 <h3 class="demo-subtitle">Interactive Website Creation</h3>
-                <p class="demo-description">During this session, we'll take suggestions from the audience and build a website using Claude AI. Our demonstration project will be creating a comprehensive website for the LSEG St. Louis Unconference.</p>
+                <p class="demo-description">During this session, we'll take suggestions from the audience and build a website using Claude AI. One possible demonstration project will be creating a website for the LSEG St. Louis Unconference.</p>
 
                 <div class="demo-grid">
                     <div class="demo-feature">
@@ -117,39 +117,150 @@
                 <h2 class="slide-header">Your Turn: Try This Prompt</h2>
                 <div class="prompt-box">
                     <h3>Create a Website for LSEG St. Louis Unconference 2025</h3>
-                    <div class="prompt-content">
-                        <p><strong>Context:</strong> The LSEG St. Louis Technology Unconference takes place Friday, October 3rd, 2025. The event features 10 technical sessions across three rooms (Training Room, Board Room, and Cozy Corner).</p>
+                    <div class="prompt-sections">
+                        <div class="prompt-section">
+                            <h4>📅 Event Context</h4>
+                            <p>The LSEG St. Louis Technology Unconference takes place Friday, October 3rd, 2025. The event features 10 technical sessions across three rooms (Training Room, Board Room, and Cozy Corner).</p>
+                        </div>
 
-                        <p><strong>Schedule:</strong></p>
-                        <ul class="schedule-list">
-                            <li>7:30 AM - 9:30 AM: Coffee Truck</li>
-                            <li>8:00 AM - 9:00 AM: Breakfast</li>
-                            <li>9:00 AM - 9:15 AM: Intro in Training Room (Stephen Carson)</li>
-                            <li>9:15 AM - 10:00 AM: Ice Breaker</li>
-                            <li>10:30 AM - 11:00 AM: Session Block 1 (3 concurrent sessions)</li>
-                            <li>11:30 AM - 12:00 PM: Session Block 2 (3 concurrent sessions)</li>
-                            <li>12:30 PM - 1:30 PM: Lunch</li>
-                            <li>1:30 PM - 2:00 PM: Session Block 3 (3 concurrent sessions)</li>
-                            <li>2:30 PM - 3:00 PM: Plenary Session</li>
-                            <li>3:00 PM - 3:30 PM: Voting</li>
-                            <li>3:30 PM - 4:00 PM: Wrap-up, Award Presenter Prizes in Training Room</li>
-                        </ul>
+                        <div class="prompt-section">
+                            <h4>⏰ Daily Schedule</h4>
+                            <div class="schedule-grid-compact">
+                                <div class="time-block">7:30-9:30 AM<br>Coffee Truck</div>
+                                <div class="time-block">8:00-9:00 AM<br>Breakfast</div>
+                                <div class="time-block">9:00-9:15 AM<br>Intro</div>
+                                <div class="time-block">9:15-10:00 AM<br>Ice Breaker</div>
+                                <div class="time-block">10:30-11:00 AM<br>Session Block 1</div>
+                                <div class="time-block">11:30-12:00 PM<br>Session Block 2</div>
+                                <div class="time-block">12:30-1:30 PM<br>Lunch</div>
+                                <div class="time-block">1:30-2:00 PM<br>Session Block 3</div>
+                                <div class="time-block">2:30-3:00 PM<br>Plenary</div>
+                                <div class="time-block">3:00-3:30 PM<br>Voting</div>
+                                <div class="time-block">3:30-4:00 PM<br>Awards</div>
+                            </div>
+                        </div>
 
-                        <p><strong>Sessions to Include:</strong></p>
-                        <ul class="session-list">
-                            <li><strong>Code Sanitizers</strong> by Michael Morey - Compiler-enabled tools to detect undefined or suspicious program behavior in memory-unsafe languages at runtime.</li>
-                            <li><strong>Ethical Considerations of GenAI</strong> by Richard McWhirter - Critical thinking about technology eroding critical thinking.</li>
-                            <li><strong>Vibe Coding</strong> by Lucas Hinkebein - Getting the most out of coding with AI.</li>
-                            <li><strong>Privatizing Your Life</strong> by Travis Menghini - Setting up a personal media server at home for safe and secure storage.</li>
-                            <li><strong>Evolution of an App</strong> by Tathagata Dasgupta - Migrating from single node to distributed solution using strategic LSEG tools.</li>
-                            <li><strong>Developer Success</strong> by Alex Temple - Supporting developers in their journey at LSEG with enhanced technical support.</li>
-                            <li><strong>Photo Editing Using Lightroom and Photoshop</strong> by James Chaney - Latest AI photo editing capabilities for wildlife, landscape and portrait photography.</li>
-                            <li><strong>The AI Web Stack: From Zero to Hosted</strong> by Matthew Schrenk - Using AI to create and host websites from scratch.</li>
-                            <li><strong>Secure Coding Standards for C++</strong> by Guanyu Tian - Buffer overflow, string vulnerabilities, integer conversion issues and mitigation strategies.</li>
-                            <li><strong>Agentic AI: An Architectural Framework</strong> by Mark Sandford - Hourglass Model and Model Context Protocol (MCP) for AI agents and tools.</li>
-                        </ul>
+                        <div class="prompt-section">
+                            <h4>🎤 10 Technical Sessions</h4>
+                            <div class="sessions-grid">
+                                <div class="session-card">
+                                    <h5>Code Sanitizers</h5>
+                                    <p class="speaker">Michael Morey</p>
+                                    <p class="description">Compiler-enabled tools to detect undefined or suspicious program behavior in memory-unsafe languages at runtime.</p>
+                                </div>
+                                <div class="session-card">
+                                    <h5>Ethical Considerations of GenAI</h5>
+                                    <p class="speaker">Richard McWhirter</p>
+                                    <p class="description">Critical thinking about technology eroding critical thinking.</p>
+                                </div>
+                                <div class="session-card">
+                                    <h5>Vibe Coding</h5>
+                                    <p class="speaker">Lucas Hinkebein</p>
+                                    <p class="description">Getting the most out of coding with AI.</p>
+                                </div>
+                                <div class="session-card">
+                                    <h5>Privatizing Your Life</h5>
+                                    <p class="speaker">Travis Menghini</p>
+                                    <p class="description">Setting up a personal media server at home for safe and secure storage.</p>
+                                </div>
+                                <div class="session-card">
+                                    <h5>Evolution of an App</h5>
+                                    <p class="speaker">Tathagata Dasgupta</p>
+                                    <p class="description">Migrating from single node to distributed solution using strategic LSEG tools.</p>
+                                </div>
+                                <div class="session-card">
+                                    <h5>Developer Success</h5>
+                                    <p class="speaker">Alex Temple</p>
+                                    <p class="description">Supporting developers in their journey at LSEG with enhanced technical support.</p>
+                                </div>
+                                <div class="session-card">
+                                    <h5>Photo Editing Using Lightroom and Photoshop</h5>
+                                    <p class="speaker">James Chaney</p>
+                                    <p class="description">Latest AI photo editing capabilities for wildlife, landscape and portrait photography.</p>
+                                </div>
+                                <div class="session-card">
+                                    <h5>The AI Web Stack: From Zero to Hosted</h5>
+                                    <p class="speaker">Matthew Schrenk</p>
+                                    <p class="description">Using AI to create and host websites from scratch.</p>
+                                </div>
+                                <div class="session-card">
+                                    <h5>Secure Coding Standards for C++</h5>
+                                    <p class="speaker">Guanyu Tian</p>
+                                    <p class="description">Buffer overflow, string vulnerabilities, integer conversion issues and mitigation strategies.</p>
+                                </div>
+                                <div class="session-card">
+                                    <h5>Agentic AI: An Architectural Framework</h5>
+                                    <p class="speaker">Mark Sandford</p>
+                                    <p class="description">Hourglass Model and Model Context Protocol (MCP) for AI agents and tools.</p>
+                                </div>
+                            </div>
+                        </div>
 
-                        <p><strong>Design Requirements:</strong> Create a modern, professional website with a clean layout, responsive design, full day schedule table, session descriptions, speaker bios, and easy navigation.</p>
+                        <div class="prompt-section">
+                            <h4>🎨 Design Requirements</h4>
+                            <p>Create a modern, professional website with a clean layout, responsive design, full day schedule table, session descriptions, speaker bios, and easy navigation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: How This Site Is Hosted -->
+        <section class="slide" id="slide-6">
+            <div class="slide-content">
+                <h2 class="slide-header">This Presentation: GitHub Pages</h2>
+                <div class="github-pages-layout">
+                    <div class="github-links">
+                        <div class="link-card">
+                            <div class="link-icon">🌐</div>
+                            <h3>Live Site</h3>
+                            <a href="https://redactedman.github.io/unconference2025/" target="_blank" class="btn btn-primary">redactedman.github.io/unconference2025</a>
+                        </div>
+                        <div class="link-card">
+                            <div class="link-icon">💻</div>
+                            <h3>Source Code</h3>
+                            <a href="https://github.com/RedactedMan/unconference2025/" target="_blank" class="btn btn-secondary">github.com/RedactedMan/unconference2025</a>
+                        </div>
+                    </div>
+
+                    <div class="github-features">
+                        <h3>How GitHub Pages Works</h3>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">🆓</div>
+                                <h4>Free Hosting</h4>
+                                <p>Static websites hosted directly from your repository</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🚀</div>
+                                <h4>Auto Deploy</h4>
+                                <p>Push to repo and changes go live automatically</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🔒</div>
+                                <h4>HTTPS</h4>
+                                <p>Free SSL certificates for secure connections</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🌍</div>
+                                <h4>Custom Domains</h4>
+                                <p>Use your own domain or github.io subdomain</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">⚙️</div>
+                                <h4>No Servers</h4>
+                                <p>No need to configure servers or databases</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">📜</div>
+                                <h4>Version Control</h4>
+                                <p>Full Git history of all your changes</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="github-perfect-for">
+                        <p><strong>Perfect for:</strong> Documentation sites, portfolios, project pages, presentations, and any static HTML/CSS/JavaScript content</p>
                     </div>
                 </div>
             </div>
@@ -158,7 +269,7 @@
 
     <script>
         let currentSlide = 1;
-        const totalSlides = 5;
+        const totalSlides = 6;
 
         function showSlide(n) {
             const slides = document.querySelectorAll('.slide');
