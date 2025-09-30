@@ -304,6 +304,119 @@ body {
     font-weight: 500;
 }
 
+/* Website Preview / Browser Mockup */
+.website-preview {
+    margin-bottom: 2rem;
+}
+
+.browser-mockup {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.browser-bar {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.browser-dots {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.browser-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.browser-dots span:nth-child(1) {
+    background: #ff5f56;
+}
+
+.browser-dots span:nth-child(2) {
+    background: #ffbd2e;
+}
+
+.browser-dots span:nth-child(3) {
+    background: #27c93f;
+}
+
+.browser-url {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.4rem 0.75rem;
+    border-radius: 5px;
+    color: white;
+    font-size: 0.85rem;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.browser-content {
+    background: rgba(255, 255, 255, 0.05);
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.website-screenshot {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    min-height: 200px;
+}
+
+.preview-placeholder {
+    text-align: center;
+    padding: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.preview-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.preview-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.preview-subtext {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
 /* Demo Section */
 .demo-subtitle {
     font-size: 2rem;
@@ -349,6 +462,24 @@ body {
 
 .demo-feature:nth-child(3) {
     animation-delay: 0.6s;
+}
+
+.feature-icon-large {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.demo-feature:nth-child(1) .feature-icon-large {
+    animation-delay: 0s;
+}
+
+.demo-feature:nth-child(2) .feature-icon-large {
+    animation-delay: 0.5s;
+}
+
+.demo-feature:nth-child(3) .feature-icon-large {
+    animation-delay: 1s;
 }
 
 .demo-feature h4 {
@@ -522,7 +653,14 @@ body {
 
 /* Prompt Box Styles (Slide 5) */
 .prompt-box {
-    background: rgba(255, 255, 255, 0.1);
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.03) 25%, transparent 25%),
+        linear-gradient(225deg, rgba(255, 255, 255, 0.03) 25%, transparent 25%),
+        linear-gradient(45deg, rgba(255, 255, 255, 0.03) 25%, transparent 25%),
+        linear-gradient(315deg, rgba(255, 255, 255, 0.03) 25%, transparent 25%),
+        rgba(255, 255, 255, 0.1);
+    background-size: 40px 40px;
+    background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
     padding: 2rem;
     border-radius: 15px;
     backdrop-filter: blur(10px);
@@ -570,6 +708,55 @@ body {
     font-size: 0.9rem;
     text-align: center;
     line-height: 1.4;
+    border-left: 4px solid rgba(255, 255, 255, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.time-block:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Morning - Food & Coffee (Warm orange) */
+.time-block.morning-food {
+    background: rgba(251, 146, 60, 0.25);
+    border-left-color: #fb923c;
+}
+
+/* Morning - Intro & Ice Breaker (Bright blue) */
+.time-block.morning-intro {
+    background: rgba(59, 130, 246, 0.25);
+    border-left-color: #3b82f6;
+}
+
+/* Morning Sessions (Purple) */
+.time-block.morning-session {
+    background: rgba(168, 85, 247, 0.25);
+    border-left-color: #a855f7;
+}
+
+/* Lunch (Green) */
+.time-block.lunch {
+    background: rgba(34, 197, 94, 0.25);
+    border-left-color: #22c55e;
+}
+
+/* Afternoon Sessions (Pink) */
+.time-block.afternoon-session {
+    background: rgba(236, 72, 153, 0.25);
+    border-left-color: #ec4899;
+}
+
+/* Plenary (Gold/Yellow) */
+.time-block.afternoon-plenary {
+    background: rgba(234, 179, 8, 0.25);
+    border-left-color: #eab308;
+}
+
+/* Closing Activities (Teal) */
+.time-block.afternoon-closing {
+    background: rgba(20, 184, 166, 0.25);
+    border-left-color: #14b8a6;
 }
 
 .sessions-grid {
@@ -646,6 +833,88 @@ body {
     font-size: 1.8rem;
     margin-bottom: 1rem;
     color: #fff;
+}
+
+/* GitHub Flow Diagram */
+.github-flow {
+    margin-bottom: 2rem;
+}
+
+.github-flow h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: white;
+}
+
+.flow-diagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.flow-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    min-width: 120px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.flow-step:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.flow-icon {
+    font-size: 3rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.flow-step:nth-child(1) .flow-icon {
+    animation-delay: 0s;
+}
+
+.flow-step:nth-child(3) .flow-icon {
+    animation-delay: 0.5s;
+}
+
+.flow-step:nth-child(5) .flow-icon {
+    animation-delay: 1s;
+}
+
+.flow-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+}
+
+.flow-arrow {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: bold;
+    animation: slideRight 2s ease-in-out infinite;
+}
+
+@keyframes slideRight {
+    0%, 100% {
+        transform: translateX(0);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateX(5px);
+        opacity: 1;
+    }
 }
 
 .github-features h3 {
