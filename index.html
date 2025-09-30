@@ -10,7 +10,7 @@
     <!-- Slide Navigation -->
     <div class="slide-nav">
         <button id="prevBtn" class="nav-btn" onclick="changeSlide(-1)">‹</button>
-        <span id="slideCounter" class="slide-counter">1 / 6</span>
+        <span id="slideCounter" class="slide-counter">1 / 7</span>
         <button id="nextBtn" class="nav-btn" onclick="changeSlide(1)">›</button>
     </div>
 
@@ -53,8 +53,39 @@
             </div>
         </section>
 
-        <!-- Slide 3: Glory Creek Ranch Case Study -->
+        <!-- Slide 3: Key Concepts -->
         <section class="slide" id="slide-3">
+            <div class="slide-content">
+                <h2 class="slide-header">Key Concepts for Success</h2>
+                <p class="slide-lead">Understanding these principles will help you get the most out of AI-powered development.</p>
+
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <div class="concept-number">1</div>
+                        <h3>🖥️ Interface Matters</h3>
+                        <p>CLI coding tools with file system access are significantly more powerful than chat-only interfaces. Direct file manipulation and tool integration unlock real productivity.</p>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">2</div>
+                        <h3>🤖 Model Matters</h3>
+                        <p>Coding-specific models are essential and behave very differently from base models. They understand code structure, conventions, and can reason about software architecture.</p>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">3</div>
+                        <h3>🔧 Try Different Tools</h3>
+                        <p>Different AI tools excel at different tasks. Try out Claude, GitHub Copilot, and Gemini in an IDE and at the CLI. Ask more generic questions to a simpler model or one you don't have strict token limits on.</p>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-number">4</div>
+                        <h3>🧠 Context is King</h3>
+                        <p>Keep your conversation focused and context relevant. Long, meandering conversations lose coherence. Start fresh when switching tasks or when the AI seems confused.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Glory Creek Ranch Case Study -->
+        <section class="slide" id="slide-4">
             <div class="slide-content">
                 <h2 class="slide-header">Case Study: Glory Creek Ranch</h2>
                 <div class="slide-showcase">
@@ -408,7 +439,7 @@
 
     <script>
         let currentSlide = 1;
-        const totalSlides = 6;
+        const totalSlides = 7;
 
         function showSlide(n) {
             const slides = document.querySelectorAll('.slide');
