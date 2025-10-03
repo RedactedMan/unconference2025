@@ -100,6 +100,8 @@
                         <div class="tech-grid">
                             <a href="https://aistudio.google.com/" target="_blank" class="tech-item">Google AI Studio</a>
                             <a href="https://github.com/google-gemini/gemini-cli" target="_blank" class="tech-item">Gemini CLI</a>
+                            <a href="https://code.visualstudio.com/" target="_blank" class="tech-item">VSCode</a>
+                            <a href="https://github.com/features/copilot" target="_blank" class="tech-item">GitHub Copilot</a>
                             <a href="https://www.raspberrypi.com/" target="_blank" class="tech-item">Raspberry Pi</a>
                             <a href="https://nginx.org/" target="_blank" class="tech-item">nginx</a>
                             <a href="https://www.noip.com/remote-access" target="_blank" class="tech-item">DDNS</a>
@@ -190,19 +192,102 @@
                         </div>
 
                         <div class="prompt-section">
-                            <h4>⏰ Daily Schedule</h4>
-                            <div class="schedule-grid-compact">
-                                <div class="time-block morning-food">7:30-9:30 AM<br>Coffee Truck</div>
-                                <div class="time-block morning-food">8:00-9:00 AM<br>Breakfast</div>
-                                <div class="time-block morning-intro">9:00-9:15 AM<br>Intro</div>
-                                <div class="time-block morning-intro">9:15-10:00 AM<br>Ice Breaker</div>
-                                <div class="time-block morning-session">10:30-11:00 AM<br>Session Block 1</div>
-                                <div class="time-block morning-session">11:30-12:00 PM<br>Session Block 2</div>
-                                <div class="time-block lunch">12:30-1:30 PM<br>Lunch</div>
-                                <div class="time-block afternoon-session">1:30-2:00 PM<br>Session Block 3</div>
-                                <div class="time-block afternoon-plenary">2:30-3:00 PM<br>Plenary</div>
-                                <div class="time-block afternoon-closing">3:00-3:30 PM<br>Voting</div>
-                                <div class="time-block afternoon-closing">3:30-4:00 PM<br>Awards</div>
+                            <h4>⏰ Full Day Schedule</h4>
+                            <div class="schedule-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Start</th>
+                                            <th>End</th>
+                                            <th>Training Room (75)</th>
+                                            <th>Board Room (30)</th>
+                                            <th>Cozy Corner (20+)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="food-row">
+                                            <td>7:30 AM</td>
+                                            <td>9:30 AM</td>
+                                            <td colspan="3">Coffee Truck</td>
+                                        </tr>
+                                        <tr class="food-row">
+                                            <td>8:00 AM</td>
+                                            <td>9:00 AM</td>
+                                            <td colspan="3">Breakfast</td>
+                                        </tr>
+                                        <tr class="intro-row">
+                                            <td>9:00 AM</td>
+                                            <td>9:15 AM</td>
+                                            <td colspan="3">Intro in Training Room (Stephen Carson)</td>
+                                        </tr>
+                                        <tr class="intro-row">
+                                            <td>9:15 AM</td>
+                                            <td>10:00 AM</td>
+                                            <td colspan="3">Ice Breaker</td>
+                                        </tr>
+                                        <tr class="break-row">
+                                            <td>10:00 AM</td>
+                                            <td>10:30 AM</td>
+                                            <td colspan="3">Session Run-Over</td>
+                                        </tr>
+                                        <tr class="session-row">
+                                            <td>10:30 AM</td>
+                                            <td>11:00 AM</td>
+                                            <td>Ethical Considerations of Gen AI (Richard)</td>
+                                            <td>Vibe Coding (Lucas)</td>
+                                            <td>Code Sanitizers (Michael)</td>
+                                        </tr>
+                                        <tr class="break-row">
+                                            <td>11:00 AM</td>
+                                            <td>11:30 AM</td>
+                                            <td colspan="3">Session Run-Over and Q&A Time</td>
+                                        </tr>
+                                        <tr class="session-row">
+                                            <td>11:30 AM</td>
+                                            <td>12:00 PM</td>
+                                            <td>Privatizing Your Life (Travis)</td>
+                                            <td>Evolution of an App (Tathagata)</td>
+                                            <td>Developer Success (Alex)</td>
+                                        </tr>
+                                        <tr class="break-row">
+                                            <td>12:00 PM</td>
+                                            <td>12:30 PM</td>
+                                            <td colspan="3">Session Run-Over and Q&A Time</td>
+                                        </tr>
+                                        <tr class="lunch-row">
+                                            <td>12:30 PM</td>
+                                            <td>1:30 PM</td>
+                                            <td colspan="3">Lunch</td>
+                                        </tr>
+                                        <tr class="session-row highlight-row">
+                                            <td>1:30 PM</td>
+                                            <td>2:00 PM</td>
+                                            <td><strong>The AI Webstack: From Zero to Hosted (Matthew)</strong></td>
+                                            <td>Photo Editing using Lightroom and Photoshop (James)</td>
+                                            <td>Secure Coding Standards for C++ (Guanyu)</td>
+                                        </tr>
+                                        <tr class="break-row">
+                                            <td>2:00 PM</td>
+                                            <td>2:30 PM</td>
+                                            <td colspan="3">Session Run-Over and Q&A Time</td>
+                                        </tr>
+                                        <tr class="plenary-row">
+                                            <td>2:30 PM</td>
+                                            <td>3:00 PM</td>
+                                            <td colspan="3">Agentic AI: An Architectural Framework (Mark)</td>
+                                        </tr>
+                                        <tr class="voting-row">
+                                            <td>3:00 PM</td>
+                                            <td>3:30 PM</td>
+                                            <td colspan="3">Session Run-Over and Q&A Time and VOTING</td>
+                                        </tr>
+                                        <tr class="closing-row">
+                                            <td>3:30 PM</td>
+                                            <td>4:00 PM</td>
+                                            <td colspan="3">Wrap-up, Award Presenter Prizes in Training Room</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
 

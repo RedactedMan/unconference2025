@@ -1040,6 +1040,83 @@ body {
     gap: 0.75rem;
 }
 
+/* Schedule Table Styles */
+.schedule-table {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+.schedule-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.schedule-table thead {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.schedule-table th {
+    padding: 0.75rem;
+    text-align: left;
+    font-weight: 600;
+    color: #fff;
+    font-size: 0.95rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.schedule-table td {
+    padding: 0.6rem 0.75rem;
+    color: #fff;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.schedule-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Row color coding */
+.schedule-table .food-row {
+    background: rgba(251, 146, 60, 0.15);
+}
+
+.schedule-table .intro-row {
+    background: rgba(59, 130, 246, 0.15);
+}
+
+.schedule-table .session-row {
+    background: rgba(168, 85, 247, 0.15);
+}
+
+.schedule-table .break-row {
+    background: rgba(156, 163, 175, 0.15);
+}
+
+.schedule-table .lunch-row {
+    background: rgba(34, 197, 94, 0.15);
+}
+
+.schedule-table .plenary-row {
+    background: rgba(236, 72, 153, 0.15);
+}
+
+.schedule-table .voting-row {
+    background: rgba(245, 158, 11, 0.15);
+}
+
+.schedule-table .closing-row {
+    background: rgba(139, 92, 246, 0.15);
+}
+
+.schedule-table .highlight-row {
+    background: rgba(52, 211, 153, 0.25);
+    border: 1px solid rgba(52, 211, 153, 0.5);
+}
+
 .time-block {
     background: rgba(255, 255, 255, 0.2);
     padding: 0.75rem;
